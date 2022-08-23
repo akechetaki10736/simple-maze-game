@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        h1 {
+            color: white;
+            font-size: 72px;
+        }
+
+        .winner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* #replay {
+            background-color: transparent;
+        }
+
+        #replay:hover {
+            background-color: #4CAF50;
+            color: white;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="winner hidden">
+        <h1>You Win !</h1>
+        <button id="replay">
+            <h1>Play Again</h1>
+        </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
