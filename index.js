@@ -1,8 +1,8 @@
 const startNewGame = () => {
     const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-    const cellsHorizontal = 4;
-    const cellsVertical = 3;
+    const cellsHorizontal = 32;
+    const cellsVertical = 24;
     const width = window.innerWidth;
     const height = window.innerHeight;
 
@@ -224,9 +224,7 @@ const startNewGame = () => {
         event.pairs.forEach((collision) => {
             const labels = ['ball', 'goal'];
             if (labels.includes(collision.bodyA.label) && labels.includes(collision.bodyB.label)) {
-                document.querySelectorAll('.winner').forEach(element => {
-                    element.classList.remove('hidden');
-                })
+                document.querySelector('.winner').classList.remove('hidden');               
                 world.gravity.y = 1;
                 world.bodies.forEach((body) => {
                     if (body.label === 'wall') {
